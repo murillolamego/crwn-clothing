@@ -5,7 +5,9 @@ import {
   CheckoutItemContainer,
   ImageContainer,
   Name,
+  Price,
   Quantity,
+  RemoveButton,
   Value,
 } from "./checkout-item.styles";
 
@@ -31,10 +33,10 @@ const CheckoutItem = ({ cartItem }) => {
         <Value>{quantity}</Value>
         <Arrow onClick={addItemHandler}>&#10095;</Arrow>
       </Quantity>
-      <span className="price">{price}</span>
-      <div onClick={clearItemHandler} className="remove-button">
+      <Price className="price">{price}</Price>
+      <RemoveButton onClick={clearItemHandler} className="remove-button">
         &#10005;
-      </div>
+      </RemoveButton>
     </CheckoutItemContainer>
   );
 };

@@ -7,7 +7,7 @@ import {
   Title,
 } from "./category-preview.styles";
 
-const CategoryPreview = ({ key, title, products }) => {
+const CategoryPreview = ({ title, products }) => {
   return (
     <CategoryPreviewContainer>
       <h2>
@@ -19,7 +19,7 @@ const CategoryPreview = ({ key, title, products }) => {
         {products
           .filter((_, idx) => idx < 4)
           .map((product) => (
-            <ProductCard key={key} product={product} />
+            <ProductCard key={product.id} product={product} />
           ))}
       </Preview>
     </CategoryPreviewContainer>
